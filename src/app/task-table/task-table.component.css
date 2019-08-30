@@ -1,0 +1,25 @@
+.click {
+    background-color: #ede !important;
+}
+
+.not_click {
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border: 1px 0 solid #bbb;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.px-8 {
+    padding: 0 8px;
+}

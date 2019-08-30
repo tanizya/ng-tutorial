@@ -1,0 +1,9 @@
+<table>
+    <tr *ngFor="let row of taskList" (click)="clickRow(row)" [ngClass]="onColor(row.id)">
+        <td class="px-8">{{row.id}}</td>
+        <td class="px-8">{{row.todo}}</td>
+        <td class="px-8">{{row.priority}}</td>
+    </tr>
+</table>
+<!-- <div *ngIf="selected !== '' ; else elseBlock">選択中 : {{selected}}</div>
+<ng-template #elseBlock>未選択</ng-template> -->

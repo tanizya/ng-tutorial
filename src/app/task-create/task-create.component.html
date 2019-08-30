@@ -1,0 +1,26 @@
+<mat-card class="form-container my-10">
+    <h2>TODO登録
+    </h2>
+    <form #taskForm="ngForm">
+        <!-- <mat-form-field>
+            <input matInput #taskId="ngModel" name="taskId" placeholder="ID" [(ngModel)]="task.id" required
+                pattern="^[0-9]+$">
+            <mat-error *ngIf="taskId.hasError('required')">必須入力項目です</mat-error>
+            <mat-error *ngIf="taskId.hasError('pattern')">半角数字のみ入力できます</mat-error>
+        </mat-form-field> -->
+        <mat-form-field>
+            <input matInput #taskTodo="ngModel" name="taskTodo" placeholder="やること" [(ngModel)]="task.todo" required>
+            <mat-error *ngIf="taskTodo.hasError('required')">必須入力項目です</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="優先度" [(ngModel)]="task.priority" name="taskPriority">
+                <mat-option value="すぐやる">すぐやる</mat-option>
+                <mat-option value="あとで">あとで</mat-option>
+                <mat-option value="気が向いたら">気が向いたら</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button [disabled]="taskForm.invalid" mat-raised-button color="primary" (click)="newTask()">新規作成</button>
+        </div>
+    </form>
+</mat-card>
